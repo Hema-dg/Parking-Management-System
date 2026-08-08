@@ -1,91 +1,100 @@
-# Parking-Management-System
+🚗 Parking Management System
 
-# 🚗 Parking Management System
+An AI-assisted Parking Management System developed as a group project using Python, Flask, HTML, CSS, and JavaScript.
 
-An AI-assisted Parking Management System developed as a group project using Python, Flask, HTML, CSS and JavaScript.
+📌 Project Overview
 
-## 📌 Project Overview
+Parking management can become difficult when parking slot availability, vehicle entry and exit, and fee calculation are handled manually.
 
-Parking management can become difficult when slot availability, vehicle entry and exit, and fee calculation are handled manually.
+Our project provides a simple browser-based solution to manage these processes digitally. The system allows vehicle numbers to be entered manually or scanned using a camera, assigns an available parking slot, tracks parking duration, and calculates the parking fee during exit.
 
-Our project provides a simple digital solution to manage these processes through a browser-based interface.
+🎯 Project Objectives
 
-The system can:
+The main objectives of our project are:
 
-- Display available and occupied parking slots
+- Display parking slot availability in real time
 - Automatically assign an available parking slot
 - Record vehicle entry time
-- Track parking duration
-- Calculate parking fees
+- Track vehicle parking duration
 - Manage vehicle entry and exit
-- Detect license plates using OCR
+- Calculate parking fees automatically
+- Provide camera-based vehicle number scanning
+- Reduce manual work in parking management
 
-## ✨ Key Features
+✨ Key Features
 
-### 🅿️ Parking Slot Management
+🅿️ Parking Slot Management
 
-- 10 parking slots are maintained by the system.
-- Slots are displayed as FREE or TAKEN.
-- The system automatically assigns an available slot.
+- The system maintains 10 parking slots.
+- Each slot is displayed as either **FREE** or **TAKEN**.
+- The system automatically assigns the first available parking slot.
 - Slot status is updated after vehicle entry and exit.
+- The vehicle number is displayed for occupied slots.
 
-### 🚘 Vehicle Entry
+🚘 Vehicle Entry
 
 - Vehicle numbers can be entered manually.
-- Camera-based license plate scanning is available.
-- An available parking slot is automatically assigned to the vehicle.
+- A camera can be opened to scan the vehicle license plate.
+- After obtaining the vehicle number, the system assigns the first available parking slot.
+- The vehicle's entry time is recorded automatically.
 
-### 📷 License Plate Detection
+📷 Camera-Based OCR
 
-The system uses the device camera and Tesseract.js OCR to detect license plate text.
+The system provides camera-based license plate text scanning using **Tesseract.js OCR**.
 
-If automatic detection is unsuccessful, the vehicle number can be entered manually.
+The captured camera image is processed to recognize letters and numbers from the vehicle plate.
 
-### 🚪 Vehicle Exit
+If the plate cannot be detected automatically, the vehicle number can be entered manually.
 
-- Vehicle number is used to identify the parked vehicle.
-- Parking duration is calculated using the entry and exit times.
-- The parking slot becomes available after the vehicle exits.
+🚪 Vehicle Exit
 
-### 💰 Fee Calculation
+- The vehicle number is used to find the parked vehicle.
+- The system calculates the parking duration using the recorded entry time and current exit time.
+- The parking fee is calculated automatically.
+- After exit, the vehicle is removed from the assigned slot.
+- The released slot becomes available again.
 
-Parking charges are calculated according to the parking duration and configured hourly rate.
+💰 Parking Fee Calculation
+
+The parking fee is calculated according to the parking duration and configured hourly rate.
 
 A minimum parking fee is also applied.
 
-### 📊 Parking Status
+📊 Parking Status
 
-The system displays:
+The system provides a live overview of:
 
 - Total parking slots
 - Free slots
 - Occupied slots
 - Vehicle numbers assigned to occupied slots
+💾 Browser Data Storage
 
-### 💾 Data Storage
+The system uses **Browser Local Storage** to retain parking information.
 
-Browser Local Storage is used to retain parking information.
+This allows the parking data to remain available when the page is refreshed.
 
-## 🛠️ Technologies Used
+🛠️ Technologies Used
 
-- Python
-- Flask
-- HTML
-- CSS
-- JavaScript
-- Tesseract.js
-- Browser Local Storage
+- **Python**
+- **Flask**
+- **HTML**
+- **CSS**
+- **JavaScript**
+- **Tesseract.js**
+- **Browser Local Storage**
 
-## 🔄 System Workflow
+🔄 System Workflow
 
-```text
+https://www.linkedin.com/posts/hema-d-g-778297409_parkingmanagementsystem-smartparking-groupproject-ugcPost-7491790699932123136-cwhQ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGgotIwBWIbfgGWHjlYMTOKxWY27f3_-5PA
+
 Vehicle Arrives
        ↓
 Scan / Enter Vehicle Number
        ↓
 Check Available Slots
        ↓
-Assign Parking Slot
+Assign First Available Slot
        ↓
 Record Entry Time
        ↓
@@ -99,4 +108,4 @@ Calculate Parking Fee
        ↓
 Release Parking Slot
        ↓
-Update Slot Availability
+Update Parking Status
